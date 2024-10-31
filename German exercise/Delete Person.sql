@@ -10,7 +10,7 @@ CREATE OR REPLACE PROCEDURE delete_person(
          
          COMMIT;
          
-         dbms_output.put_line('Die folgende Person wurde gelöscht: ' || p_name);
+         dbms_output.put_line('Die folgende Person wurde gelÃ¶scht: ' || p_name);
          END delete_person;
          
          BEGIN
