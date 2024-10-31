@@ -10,7 +10,7 @@ CREATE OR REPLACE PROCEDURE update_person(
          
          COMMIT;
          
-         dbms_output.put_line('Die neue Tätigkeit lautet: ' || p_taetigkeit);
+         dbms_output.put_line('Die neue TÃ¤tigkeit lautet: ' || p_taetigkeit);
          END update_person;
          
          BEGIN
