@@ -1,0 +1,34 @@
+CREATE TABLE cmi_test_familien(
+ID INT NOT NULL,
+familienname VARCHAR2(20),
+anzahl_kinder INT,
+id_ort INT,
+PRIMARY KEY (ID),
+FOREIGN KEY (id_ort) REFERENCES cmi_test_ort(ID)
+);
+
+---
+
+CREATE TABLE cmi_test_person (
+ID INT NOT NULL, 
+vorname VARCHAR2(20), 
+geburtsdatum DATE, 
+taetigkeit VARCHAR(20), 
+id_familien INT, PRIMARY KEY (ID), 
+FOREIGN KEY (id_familien) REFERENCES cmi_test_familien(ID));
+---
+CREATE TABLE cmi_test_ort (
+       ID INT NOT NULL,
+       NAME VARCHAR2(20) NOT NULL,
+       plz VARCHAR2(6) NOT NULL,
+       PRIMARY KEY (ID)
+);
+---
+
+CREATE TABLE cmi_test_eltern( 
+id_kind INT NOT NULL, 
+id_vater INT, 
+id_mutter INT, 
+FOREIGN KEY (id_vater) REFERENCES cmi_test_person(id), 
+FOREIGN KEY (id_mutter) REFERENCES cmi_test_person(id)
+);
