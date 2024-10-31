@@ -1,4 +1,4 @@
-CREATE OR REPLACE PROCEDURE einfügen_name_familienname (v_name IN cmi_test_person.vorname%TYPE, v_familienname IN cmi_test_familien.familienname%TYPE) IS
+CREATE OR REPLACE PROCEDURE einfÃ¼gen_name_familienname (v_name IN cmi_test_person.vorname%TYPE, v_familienname IN cmi_test_familien.familienname%TYPE) IS
 person_id cmi_test_person.id%TYPE;
 familien_id cmi_test_familien.id%TYPE;
 
@@ -24,13 +24,13 @@ FROM dual
 WHERE NOT EXISTS (SELECT 1 FROM cmi_test_familien c WHERE c.familienname = v_familienname);
 
 COMMIT;
-END einfügen_name_familienname;
+END einfÃ¼gen_name_familienname;
 
 ----
 
 BEGIN
   
-einfügen_name_familienname('Martin', 'Günter');
+einfÃ¼gen_name_familienname('Martin', 'GÃ¼nter');
 END;
 
 --
