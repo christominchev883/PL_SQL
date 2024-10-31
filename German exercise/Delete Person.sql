@@ -12,7 +12,16 @@ CREATE OR REPLACE PROCEDURE delete_person(
          
          dbms_output.put_line('Die folgende Person wurde gelöscht: ' || p_name);
          END delete_person;
-         
+
+
+
+
+         ---------------
+
+
+
+
+
          BEGIN
            delete_person('Ico');
            END;
