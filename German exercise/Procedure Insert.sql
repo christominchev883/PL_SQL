@@ -21,5 +21,5 @@ BEGIN
      
      COMMIT;
      
-     dbms_output.put_line('Datensatz erfolgreich eingefügt mit ID: ' || c_id);
+     dbms_output.put_line('Datensatz erfolgreich eingefÃ¼gt mit ID: ' || c_id);
 END insert_person;
